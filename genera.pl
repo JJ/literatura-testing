@@ -14,7 +14,7 @@ POST_COMMIT {
 	  #Inspired by http://stackoverflow.com/questions/15214762/how-can-i-sync-documentation-with-github-pages
 	  $git->command(qw/checkout gh-pages/);
 	  $git->command( 'checkout', 'master', '--', 'testeando.ad' );
-	  `asciidoc --backend deckjs testeando.ad -o index.html`;
+	  `asciidoc --backend=deckjs -o index.html testeando.ad`;
 	  $git->command('commit','-a', '-m', "Generando diapos en gh-pages");
       }
       $git->command(qw/checkout master/); #back to original
