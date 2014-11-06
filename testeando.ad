@@ -1,10 +1,15 @@
 Testeando en la nube: Un acercamiento a Perl desde la literatura
 ================================================================
-
 :author:    JJ merelo
-:backend:   slidy
+:email: jjmerelo@gmail.com
+:description: Presentación para Barcelona Perl Workshop
+:backend:   deckjs
 :max-width: 50em
 :data-uri:
+:revnumber: 0.1
+:deckjs_theme: neon
+:deckjs_transition: horizontal-slide
+:icons:
 
 Comprad el libro
 ----------------
