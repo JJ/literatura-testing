@@ -11,26 +11,36 @@ Testeando en la nube: Un acercamiento a Perl desde la literatura
 :deckjs_transition: horizontal-slide
 :icons:
 
-[[cc_image]]
-image::cc-by-sa.png[]
-
-==Comprad el libro
-
+Comprad el libro
+----------------
 
 [[libro_image]]
 image::esquina.png[]
 
-==O de cómo empecé escribiendo un libro y acabé escribiendo un módulo de test, haciendo _pull requests_ sobre otro y aprendiendo DevOps
+O de cómo empecé escribiendo un libro y acabé escribiendo un módulo de test, haciendo _pull requests_ sobre otro y aprendiendo DevOps
+-------------------------------------------------------------------------------------------------------------------------------------
 
-==Y escribiendo un libro
+Y escribiendo un libro
+----------------------
 
 <<libro_image>>
 
-==Escribir un libro es como desarrollar software
+Escribir un libro es como desarrollar software
+----------------------------------------------
 
 [role="incremental"]
 - Prepara tus herramientas
 - Escribe
 - Comprueba lo escrito
 - Publica
+[role="incremental"]
+
+O, dicho de otro modo
+---------------------
+
+[role="incremental"]
+- Provisiona
+- Código, código, código
+- Test
+- Despliega
 [role="incremental"]
