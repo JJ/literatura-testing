@@ -41,6 +41,29 @@ O, dicho de otro modo
 [role="incremental"]
 - Provisiona
 - Código, código, código
-- Test
+- Test - integración continua
 - Despliega
 [role="incremental"]
+
+Cómo testear en la nube. 1. Añadir ficheros de test
+---------------------------------------------------
+
+[source,perl]
+.test-hoborg.t
+----
+my $hoborg = new Text::Hoborg;
+my $dir = $hoborg->dir();
+
+diag( "Testing Text::Hoborg $Text::Hoborg::VERSION in $dir" );
+
+$speller->add_dic("$dir/words.dic");
+
+my @words = split /\s+/, $hoborg->text;
+my $word_re = qr/([\w\'áéíóúÁÉÍÓÚñÑ]+)/;
+
+for my $w (@words) {
+  my ($stripped_word) = ( $w =~ $word_re );
+  ok( $speller->check( $stripped_word), "Checking $stripped_word in text")   if ( $stripped_word ) ;
+}
+----
+
