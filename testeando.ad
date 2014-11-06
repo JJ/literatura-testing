@@ -23,27 +23,26 @@ O de cómo empecé escribiendo un libro y acabé escribiendo un módulo de test,
 Y escribiendo un libro
 ----------------------
 
-<<libro_image>>
+image::esquina.png[Portada del libro]
+
 
 Escribir un libro es como desarrollar software
 ----------------------------------------------
 
-[role="incremental"]
+[incremental="true"]
 - Prepara tus herramientas
 - Escribe
 - Comprueba lo escrito
 - Publica
-[role="incremental"]
 
 O, dicho de otro modo
 ---------------------
 
-[role="incremental"]
+[incremental="true"]
 - Provisiona
 - Código, código, código
 - Test - integración continua
 - Despliega
-[role="incremental"]
 
 Cómo testear en la nube. 1. Añadir ficheros de test
 ---------------------------------------------------
