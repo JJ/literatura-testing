@@ -11,22 +11,22 @@ Testeando en la nube: Un acercamiento a Perl desde la literatura
 :deckjs_transition: horizontal-slide
 :icons:
 
-[[cc_image]]
-image::cc-by-sa.png[]
-
-==Comprad el libro
-
+Comprad el libro
+----------------
 
 [[libro_image]]
 image::esquina.png[]
 
-==O de cómo empecé escribiendo un libro y acabé escribiendo un módulo de test, haciendo _pull requests_ sobre otro y aprendiendo DevOps
+O de cómo empecé escribiendo un libro y acabé escribiendo un módulo de test, haciendo _pull requests_ sobre otro y aprendiendo DevOps
+-------------------------------------------------------------------------------------------------------------------------------------
 
-==Y escribiendo un libro
+Y escribiendo un libro
+----------------------
 
 <<libro_image>>
 
-==Escribir un libro es como desarrollar software
+Escribir un libro es como desarrollar software
+----------------------------------------------
 
 [role="incremental"]
 - Prepara tus herramientas
@@ -34,3 +34,36 @@ image::esquina.png[]
 - Comprueba lo escrito
 - Publica
 [role="incremental"]
+
+O, dicho de otro modo
+---------------------
+
+[role="incremental"]
+- Provisiona
+- Código, código, código
+- Test - integración continua
+- Despliega
+[role="incremental"]
+
+Cómo testear en la nube. 1. Añadir ficheros de test
+---------------------------------------------------
+
+[source,perl]
+.test-hoborg.t
+----
+my $hoborg = new Text::Hoborg;
+my $dir = $hoborg->dir();
+
+diag( "Testing Text::Hoborg $Text::Hoborg::VERSION in $dir" );
+
+$speller->add_dic("$dir/words.dic");
+
+my @words = split /\s+/, $hoborg->text;
+my $word_re = qr/([\w\'áéíóúÁÉÍÓÚñÑ]+)/;
+
+for my $w (@words) {
+  my ($stripped_word) = ( $w =~ $word_re );
+  ok( $speller->check( $stripped_word), "Checking $stripped_word in text")   if ( $stripped_word ) ;
+}
+----
+

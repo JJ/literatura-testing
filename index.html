@@ -2444,13 +2444,19 @@ This module splits a long slide into multiple slides.
         <h1>Testeando en la nube: Un acercamiento a Perl desde la literatura</h1>
         <h3>JJ merelo</h3>
 </section>
-<img src="cc-by-sa.png" alt="cc-by-sa.png" class=""/>
-<p>==Comprad el libro</p>
+<section class="slide">
+<h2>Comprad el libro</h2>
 <img src="esquina.png" alt="esquina.png" class=""/>
-<p>==O de cómo empecé escribiendo un libro y acabé escribiendo un módulo de test, haciendo <em>pull requests</em> sobre otro y aprendiendo DevOps</p>
-<p>==Y escribiendo un libro</p>
+</section>
+<section class="slide">
+<h2>O de cómo empecé escribiendo un libro y acabé escribiendo un módulo de test, haciendo <em>pull requests</em> sobre otro y aprendiendo DevOps</h2>
+</section>
+<section class="slide">
+<h2>Y escribiendo un libro</h2>
 <p><a href="#libro_image">[libro_image]</a></p>
-<p>==Escribir un libro es como desarrollar software</p>
+</section>
+<section class="slide">
+<h2>Escribir un libro es como desarrollar software</h2>
 <ul>
 <li class="">
 Prepara tus herramientas
@@ -2465,6 +2471,47 @@ Comprueba lo escrito
 Publica
 </li>
 </ul>
+</section>
+<section class="slide">
+<h2>O, dicho de otro modo</h2>
+<ul>
+<li class="">
+Provisiona
+</li>
+<li class="">
+Código, código, código
+</li>
+<li class="">
+Test - integración continua
+</li>
+<li class="">
+Despliega
+</li>
+</ul>
+</section>
+<section class="slide">
+<h2>Cómo testear en la nube. 1. Añadir ficheros de test</h2>
+<div class="listingblock">
+<div class="title">test-hoborg.t</div>
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-weight: bold"><span style="color: #0000FF">my</span></span> <span style="color: #009900">$hoborg</span> <span style="color: #990000">=</span> new Text<span style="color: #990000">::</span>Hoborg<span style="color: #990000">;</span>
+<span style="font-weight: bold"><span style="color: #0000FF">my</span></span> <span style="color: #009900">$dir</span> <span style="color: #990000">=</span> <span style="color: #009900">$hoborg</span><span style="color: #990000">-&gt;</span><span style="font-weight: bold"><span style="color: #000000">dir</span></span><span style="color: #990000">();</span>
+
+<span style="font-weight: bold"><span style="color: #000000">diag</span></span><span style="color: #990000">(</span> <span style="color: #FF0000">"Testing Text::Hoborg $Text::Hoborg::VERSION in $dir"</span> <span style="color: #990000">);</span>
+
+<span style="color: #009900">$speller</span><span style="color: #990000">-&gt;</span><span style="font-weight: bold"><span style="color: #000000">add_dic</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"$dir/words.dic"</span><span style="color: #990000">);</span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">my</span></span> <span style="color: #009900">@words</span> <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">split</span></span> <span style="color: #FF0000">/\s+/</span><span style="color: #990000">,</span> <span style="color: #009900">$hoborg</span><span style="color: #990000">-&gt;</span>text<span style="color: #990000">;</span>
+<span style="font-weight: bold"><span style="color: #0000FF">my</span></span> <span style="color: #009900">$word_re</span> <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">qr</span></span><span style="color: #FF6600">/([\w\'áéíóúÁÉÍÓÚñÑ]+)/</span><span style="color: #990000">;</span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">for</span></span> <span style="font-weight: bold"><span style="color: #0000FF">my</span></span> <span style="color: #009900">$w</span> <span style="color: #990000">(</span><span style="color: #009900">@words</span><span style="color: #990000">)</span> <span style="color: #FF0000">{</span>
+  <span style="font-weight: bold"><span style="color: #0000FF">my</span></span> <span style="color: #990000">(</span><span style="color: #009900">$stripped_word</span><span style="color: #990000">)</span> <span style="color: #990000">=</span> <span style="color: #990000">(</span> <span style="color: #009900">$w</span> <span style="color: #990000">=~</span> <span style="color: #009900">$word_re</span> <span style="color: #990000">);</span>
+  <span style="font-weight: bold"><span style="color: #000000">ok</span></span><span style="color: #990000">(</span> <span style="color: #009900">$speller</span><span style="color: #990000">-&gt;</span><span style="font-weight: bold"><span style="color: #000000">check</span></span><span style="color: #990000">(</span> <span style="color: #009900">$stripped_word</span><span style="color: #990000">),</span> <span style="color: #FF0000">"Checking $stripped_word in text"</span><span style="color: #990000">)</span>   <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">(</span> <span style="color: #009900">$stripped_word</span> <span style="color: #990000">)</span> <span style="color: #990000">;</span>
+<span style="color: #FF0000">}</span></tt></pre></div></div>
+</section>
 <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
 <a href="#" class="deck-next-link" title="Next">&#8594;</a>
 <p class="deck-status">
