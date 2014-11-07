@@ -205,7 +205,7 @@ Pero un texto es una aplicación muy simple
 
 Y te hace pensar en la mínima cantidad de herramientas que necesitas para que _eche a andar_
 
-NOTE Y a parchear *upstream*, comprobarla periódicamente, definir el *despliegue* == publicación. 
+NOTE: Y a parchear *upstream*, comprobarla periódicamente, definir el *despliegue* == publicación. 
 
 Pero la lección más importante no es CI, ni _DevOps_, ni `Test::Builder::Module`
 --------------------------------------------------------------------------------
@@ -227,6 +227,11 @@ http://github.com/JJ/cero_a_perl
 Muchas gracias por vuestra atención
 -----------------------------------
 
-Y no olviden reservar su plaza para YAPC::EU 2015 en Granada!
+¡Y no olviden reservar su plaza para YAPC::EU 2015 en Granada!
 
+image::Batllo.png[Casa Batlló]
+
+****
+¿Preguntas?
+****
 
