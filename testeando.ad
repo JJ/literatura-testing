@@ -157,11 +157,12 @@ for my $f ( @{$self->files}) {
 Dos funciones básicas
 ---------------------
 
-- `just_check( $dir, $dict_dir[, $language = "en_US"], @files );
+- `just_check( $dir, $dict_dir[, $language = "en_US"], @files )`;
 - `done_testing`
 
 Hum. No tan simple
 ------------------
+
 [source,txt]
   - sudo apt-get install libhunspell-1.3-0 libhunspell-dev
   - curl https://raw.githubusercontent.com/JJ/Test-Text/master/data/Spanish.aff -o Spanish.aff
