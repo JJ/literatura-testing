@@ -65,3 +65,59 @@ for my $w (@words) {
 }
 ----
 
+Un testeo pide integración continua
+-----------------------------------
+
+[source,txt,numbered]
+.travis.yml
+---
+branches:
+  except:
+    - gh-pages
+language: perl
+perl:
+  - "5.16"
+before_install:
+  - sudo apt-get install libhunspell-1.3-0 hunspell-en-us libhunspell-dev
+  - cd Text-Hoborg
+script: "perl Makefile.PL && make test"
+---
+
+2. Lo mismo, pero con Aspell
+----------------------------
+
+[source,perl,numbered]
+.test-hashlash.t
+----
+use Text::Aspell;
+BEGIN {
+use_ok( 'Text::HashSlash' );
+}
+my $dict_dir;
+my $speller = Text::Aspell->new;
+die unless $speller;
+$speller->set_option('lang','es');
+my $hashslash = new Text::HashSlash;
+my $dir = $hashslash->abs_dir();
+diag( "Testing Text::HashSlash $Text::HashSlash::VERSION in $dir" );
+$speller->set_option('personal',"$dir/.aspell.es.pws");
+---
+
+¿Por qué `Aspell`?
+------------------
+
+Error de codificación en el diccionario por omisión.
+
+¿Pero hace falta Perl?
+---------------------
+
+No:
+[source,txt,numbered]
+---
+language: C
+before_install:
+  - sudo apt-get install aspell-es 
+script: OUTPUT=`cat README.md | aspell list -d es -p ./.aspell.es.pws`; if [ -n "$OUTPUT" ]; then echo $OUTPUT; exit 1; fi
+---
+
+
