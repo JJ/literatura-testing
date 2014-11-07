@@ -130,7 +130,60 @@ NOTE: ¡No cuenta palabras!
 Volvamos a Perl
 ---------------
 
+WARNING: pero ahora lo haremos bien.
+[incremental="true"]
+- Un sólo módulo para cualquier tipo de texto.
+- Número de palabras + errores + contexto de estos.
+- Que funcione con los caracteres en castellano
+
+Tiene que ser un módulo de Test
+-------------------------------
+
+`Test::Builder::Module` clase base para módulos de Test.
+
+[source,perl]
+my $tb= $CLASS->builder;
+my $speller = $self->{'_speller'};
+for my $f ( @{$self->files}) {
+  my $file_content= read_file($f, binmode => ':utf8');
+  my @words = ($file_content =~ m{\b(\p{L}+)\b}g); # gracias a SFANDINO
+  for my $w (@words) {
+    next if !$w;
+    $tb->ok( $speller->check( $w),  "'$w'");
+  }
+}
 
 
+Dos funciones básicas
+---------------------
 
+- `just_check( $dir, $dict_dir[, $language = "en_US"], @files );
+- `done_testing`
 
+Hum. No tan simple
+------------------
+[source,txt]
+  - sudo apt-get install libhunspell-1.3-0 libhunspell-dev
+  - curl https://raw.githubusercontent.com/JJ/Test-Text/master/data/Spanish.aff -o Spanish.aff
+  - curl https://raw.githubusercontent.com/SublimeText/Dictionaries/master/Spanish.dic -o Spanish.dic
+install: cpanm Test::Text TAP::Harness
+script: perl -MTAP::Harness -e 'use utf8; my $harness = TAP::Harness->new( { verbosity => 0} ); die "FAIL" if  $harness->runtests( "t/just_check.t" )->failed;'
+
+El problema de los diccionarios
+-------------------------------
+
+- Mala codificación de los diccionarios por defecto de Hunspell
+- Re-codificación del diccionario de afijos.
+
+Pero ¡está en la nube!
+----------------------
+Dos ficheros
+
+1. `t/just_check.t`
+[source,perl]
+use Test::Text;
+just_check( "text",".", "Spanish" );
+
+2. `.travis.yml`
+
+NOTE: Podría ser sólo el segundo. 
