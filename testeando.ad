@@ -190,3 +190,43 @@ just_check( "text",".", "Spanish" );
 - `.travis.yml`
 
 NOTE: Podría ser sólo el segundo. 
+
+Y, ¿para qué sirve todo esto?
+-----------------------------
+
+Para vender libros no. 
+
+image::esquina.png[Portada del libro]
+
+Las horas que son y todavía no he vendido ninguno hoy. Ni este mes. Ni el anterior.
+
+Pero un texto es una aplicación muy simple
+------------------------------------------
+
+Y te hace pensar en la mínima cantidad de herramientas que necesitas para que _eche a andar_
+
+NOTE Y a parchear *upstream*, comprobarla periódicamente, definir el *despliegue* == publicación. 
+
+Pero la lección más importante no es CI, ni _DevOps_, ni `Test::Builder::Module`
+--------------------------------------------------------------------------------
+
+Qué va
+
+Hay que ser un *full-stack writer*
+----------------------------------
+
+Y también un *_full stack programmer_*
+
+Sólo he venido a hablar de mi (próximo) libro
+---------------------------------------------
+
+*De cero a Perl en 66 píldoras* == Perl Moderno + DevOps + Ajo y Perejil.
+
+http://github.com/JJ/cero_a_perl
+
+Muchas gracias por vuestra atención
+-----------------------------------
+
+Y no olviden reservar su plaza para YAPC::EU 2015 en Granada!
+
+
