@@ -71,9 +71,6 @@ Un testeo pide integración continua
 [source,txt,numbered]
 .travis.yml
 ---
-branches:
-  except:
-    - gh-pages
 language: perl
 perl:
   - "5.16"
@@ -101,7 +98,7 @@ my $hashslash = new Text::HashSlash;
 my $dir = $hashslash->abs_dir();
 diag( "Testing Text::HashSlash $Text::HashSlash::VERSION in $dir" );
 $speller->set_option('personal',"$dir/.aspell.es.pws");
----
+----
 
 ¿Por qué `Aspell`?
 ------------------
