@@ -29,15 +29,15 @@ git-hooks.pl - Genera diapos en otra rama.
 
 =head2 SYNOPSIS
 
-First you need to install C<Git::Hooks> and C<File::Slurp>. I use say,
-so you will need perl > 5.10. Besides, you need to locate Git.pm and
+First you need to install C<Git::Hooks>. I use say,
+so you will need perl > 5.10. Besides, you need to locate C<Git.pm> and
 copy it where the file can find it. That depends on the OS and perl
 installation you're using (I use perlbrew), In my case it was:
 
   bash% cp /usr/share/perl5/Git.pm ~/perl5/perlbrew/perls/perl-5.16.1/lib/site_perl/5.16.1/
 
 Then copy git-hooks.pl to .git/hooks, make it runnable (chmod +x
-    git-hooks) and then
+    git-hooks.pl) and then
 
   bash% ln -s git-hooks.pl post-commit
 
