@@ -11,10 +11,6 @@ Testeando en la nube
 :deckjs_transition: horizontal-slide
 :icons:
 
-Un acercamiento a Perl desde la literatura
-------------------------------------------
-
-O de la literatura a DevOps pasando por Nueva York.
 
 Comprad el libro
 ----------------
@@ -22,12 +18,17 @@ Comprad el libro
 [[libro_image]]
 image::esquina.png[]
 
+Un acercamiento a Perl desde la literatura
+------------------------------------------
 
-Y escribiendo un libro
+O de la literatura a DevOps pasando por Nueva York.
+
+Y a la escritura de un libro
 ----------------------
 
 image::esquina.png[Portada del libro]
 
+Bueno, de varios...
 
 Escribir un libro es como desarrollar software
 ----------------------------------------------
