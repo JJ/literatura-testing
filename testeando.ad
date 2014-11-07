@@ -105,7 +105,7 @@ $speller->set_option('personal',"$dir/.aspell.es.pws");
 ¿Por qué `Aspell`?
 ------------------
 
-Error de codificación en el diccionario por omisión.
+Error de codificación en el diccionario por omisión. Consulta al autor de `Text::Hunspell`, sin éxito.
 
 ¿Pero hace falta Perl?
 ---------------------
@@ -116,6 +116,21 @@ language: C
 before_install:
   - sudo apt-get install aspell-es 
 script: OUTPUT=`cat README.md | aspell list -d es -p ./.aspell.es.pws`; if [ -n "$OUTPUT" ]; then echo $OUTPUT; exit 1; fi
+
+Muy alejado del parnaso
+-----------------------
+
+[incremental="true"]
+- Demasiado raro.
+- Sólo un fichero para comprobar.
+- *Hacke-y*
+
+NOTE: ¡No cuenta palabras!
+
+Volvamos a Perl
+---------------
+
+
 
 
 
