@@ -50,7 +50,7 @@ O, dicho de otro modo
 Cómo testear en la nube. 1. Añadir ficheros de test
 ---------------------------------------------------
 
-[source,perl]
+[source,perl,numbered]
 .test-hoborg.t
 ----
 my $hoborg = new Text::Hoborg;
