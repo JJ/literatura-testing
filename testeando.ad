@@ -179,11 +179,11 @@ Pero ¡está en la nube!
 ----------------------
 Dos ficheros
 
-1. `t/just_check.t`
+- `t/just_check.t`
 [source,perl]
 use Test::Text;
 just_check( "text",".", "Spanish" );
 
-2. `.travis.yml`
+- `.travis.yml`
 
 NOTE: Podría ser sólo el segundo. 
