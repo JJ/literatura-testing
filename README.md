@@ -15,7 +15,7 @@ Si quieres instalar el hook para generar automáticamente `gh-pages`, sigue las 
 
 	perldoc genera.pl
 
-
+Conviene también que te instales Adoc-mode, directamente desde el menú de gestión de paquetes de `emacs`
 
 	
 
