@@ -72,7 +72,7 @@ Un testeo pide integración continua
 
 [source,txt,numbered]
 .travis.yml
----
+
 language: perl
 perl:
   - "5.16"
@@ -80,7 +80,7 @@ before_install:
   - sudo apt-get install libhunspell-1.3-0 hunspell-en-us libhunspell-dev
   - cd Text-Hoborg
 script: "perl Makefile.PL && make test"
----
+
 
 2. Lo mismo, pero con Aspell
 ----------------------------
@@ -112,11 +112,10 @@ Error de codificación en el diccionario por omisión.
 
 No:
 [source,txt,numbered]
----
 language: C
 before_install:
   - sudo apt-get install aspell-es 
 script: OUTPUT=`cat README.md | aspell list -d es -p ./.aspell.es.pws`; if [ -n "$OUTPUT" ]; then echo $OUTPUT; exit 1; fi
----
+
 
 
