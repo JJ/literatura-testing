@@ -8,7 +8,11 @@
         <meta name="viewport" content="width=1024, user-scalable=no">
         <meta name="author" content="JJ Merelo" />
         <meta name="generator" content="AsciiDoc 8.6.9" />
-        
+
+<link href='http://fonts.googleapis.com/css?family=Nova+Mono' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Marvel' rel='stylesheet' type='text/css'>
         <!-- Core and extension CSS files -->
 <style type="text/css">
 html, body {
@@ -163,12 +167,12 @@ html, body {
   position: absolute;
   z-index: 3;
   top: 50%;
-  width: 32px;
-  height: 32px;
+  width: 64px;
+  height: 64px;
   margin-top: -16px;
-  font-size: 20px;
+  font-size: 50px;
   font-weight: bold;
-  line-height: 32px;
+  line-height: 64px;
   vertical-align: middle;
   text-align: center;
   text-decoration: none;
@@ -208,7 +212,9 @@ html, body {
   right: 5px;
   color: #888;
   z-index: 3;
-  margin: 0;
+  margin: 5px;
+  font-family: Nova Mono, monospace, sans-serif;
+  font-size: 48px;
 }
 
 body > .deck-container .deck-status {
@@ -288,6 +294,17 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
+p, ul, ol {
+    font-size: 2.5em;
+    font-family: Raleway, Arial, sans serif;
+}
+
+td.content {
+    font-size: 3em;
+    font-family: Marvel, Arial, sans serif;
+}
+
+}
 blockquote, q {
   quotes: none;
 }
@@ -340,13 +357,18 @@ select, input, textarea, button {
   font: 99% sans-serif;
 }
 
-pre, code, kbd, samp {
-  font-family: monospace, sans-serif;
+pre, code, kbd, samp, tt {
+  font-family: Nova Mono, monospace, sans-serif;
+}
+
+.listingblock .content {
+    font-family: Nova Mono, monospace, sans-serif;
 }
 
 a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
 a:hover, a:active {
   outline: none;
 }
@@ -447,7 +469,8 @@ a:link {
 
 /* End HTML5 Boilerplate adaptations */
 h1 {
-  font-size: 4.5em;
+  font-family: Arvo, Helvetica, serif;
+  font-size: 6em;
 }
 
 h1, .vcenter {
@@ -481,9 +504,10 @@ h1, .vcenter {
 }
 
 h2 {
-  font-size: 2.25em;
+  font-family: Arvo, Helvetica, serif;
+  font-size: 4em;
   font-weight: bold;
-  padding-top: .5em;
+  padding-top: 0.5em;
   margin: 0 0 .66666em 0;
   border-bottom: 3px solid #888;
 }
@@ -642,10 +666,6 @@ a:hover, a:focus {
 .deck-prev-link:hover, .deck-prev-link:focus, .deck-next-link:hover, .deck-next-link:focus {
   background: #c00;
   text-decoration: none;
-}
-
-.deck-status {
-  font-size: 0.6666em;
 }
 
 .deck-menu .slide {
