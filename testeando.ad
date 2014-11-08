@@ -123,7 +123,7 @@ Muy alejado del parnaso
 [incremental="true"]
 - Demasiado raro.
 - Sólo un fichero para comprobar.
-- *Hacke-y*
+- _Hacke-y_
 
 NOTE: ¡No cuenta palabras!
 
@@ -194,7 +194,7 @@ NOTE: Podría ser sólo el segundo.
 Y, ¿para qué sirve todo esto?
 -----------------------------
 
-Para vender libros no. 
+Para vender link:https://www.amazon.es/dp/B00MRANX32?tag=atalaya-21&camp=3634&creative=24822&linkCode=as4&creativeASIN=B00MRANX32&adid=1YEB9QAF4PT2M7YPBPP5&[libros] no. 
 
 image::esquina.png[Portada del libro]
 
@@ -205,12 +205,12 @@ Pero un texto es una aplicación muy simple
 
 Y te hace pensar en la mínima cantidad de herramientas que necesitas para que _eche a andar_
 
-NOTE: Y a parchear *upstream*, comprobarla periódicamente, definir el *despliegue* == publicación. 
+NOTE: Y a parchear _upstream_, comprobarla periódicamente, definir el _despliegue_ == publicación. 
 
 Pero la lección más importante no es CI, ni _DevOps_, ni `Test::Builder::Module`
 --------------------------------------------------------------------------------
 
-Qué va
+Qué va.
 
 Hay que ser un *full-stack writer*
 ----------------------------------
